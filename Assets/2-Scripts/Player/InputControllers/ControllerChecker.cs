@@ -5,24 +5,26 @@
 |---------------------------------------------------------------*/
 
 using UnityEngine;
-// ReSharper disable All
 
 namespace Pong.Player.InputControllers
 {
-    public abstract class BaseController : MonoBehaviour
+    [RequireComponent(typeof(BoxCollider2D), typeof(Rigidbody2D), typeof(ControllerSetter))]
+    public abstract class ControllerChecker : MonoBehaviour
     {
-        //--------------------------- Public variables ---------------------------//
-
-        [Tooltip("The name of the axis we move on")] [SerializeField] private string m_verticalAxis;
-
-        //--------------------------- Hidden variables ---------------------------//
-
+        [Tooltip("This is the setter for the controller")] public ControllerSetter m_setter;
+        
         //--------------------------- Methods ---------------------------//
 
-        public virtual Vector2 InputDirection()
+        public virtual void Update()
         {
-            Vector2 p_inputs = new Vector2(0, Input.GetAxis(m_verticalAxis));
+            InputDirection();
+        }
+        
+        public Vector2 InputDirection()
+        {
+            Vector2 p_inputs = new Vector2(0, Input.GetAxis(m_setter.m_verticalAxis));
             return p_inputs;
         }
+        
     }
 }

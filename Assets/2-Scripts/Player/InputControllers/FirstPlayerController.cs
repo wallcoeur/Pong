@@ -4,16 +4,13 @@
 |    Date of creation : 01/03/2021                              |
 |---------------------------------------------------------------*/
 
+using Pong.Player.Kinematics;
+using UnityEngine;
+
 namespace Pong.Player.InputControllers
 {
-    public class FirstPlayerController : BaseController
+    [RequireComponent(typeof(FirstPlayerKinematic))]
+    public class FirstPlayerController : ControllerChecker
     {
-        //--------------------------- Methods ---------------------------//
-
-        private void Update()
-        {
-            InputDirection();
-        }
-        
     }
 }

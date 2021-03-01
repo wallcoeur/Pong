@@ -1,7 +1,7 @@
 ﻿/*--------------------------------------------------------------|
 |    Author : Iohannes Mbooumba                                 |
 |    Nickname : Eldersys                                        |
-|    Date of creation : XX/XX/20XX                              |
+|    Date of creation : 01/03/2021                              |
 |---------------------------------------------------------------*/
 
 using Pong.Player.InputControllers;
@@ -9,19 +9,12 @@ using UnityEngine;
 
 namespace Pong.Player.Kinematics
 {
-    [RequireComponent(typeof(FirstPlayerController))]
-    public class FirstPlayerKinematic : MonoBehaviour
+    [RequireComponent(typeof(FirstPlayerController), typeof(BoxCollider2D), typeof(Rigidbody2D))]
+    public sealed class FirstPlayerKinematic : BasePlayerKinematic
     {
-        //--------------------------- Public variables ---------------------------//
-        
-        public FirstPlayerController m_controller;
-        
-        //--------------------------- Methods ---------------------------//
-        
-        // Update is called once per frame
-        void Update()
+        private void Awake()
         {
-            transform.Translate(m_controller.InputDirection() * (5 * Time.deltaTime));
+            m_controller = GetComponent<FirstPlayerController>();
         }
     }
 }

@@ -1,21 +1,20 @@
-﻿using Pong.Player.InputControllers;
+﻿/*--------------------------------------------------------------|
+|    Author : Iohannes Mbooumba                                 |
+|    Nickname : Eldersys                                        |
+|    Date of creation : 01/03/2021                              |
+|---------------------------------------------------------------*/
+
+using Pong.Player.InputControllers;
 using UnityEngine;
 
 namespace Pong.Player.Kinematics
 {
-    [RequireComponent(typeof(SecondPlayerController))]
-    public class SecondPlayerKinematic : MonoBehaviour
+    [RequireComponent(typeof(SecondPlayerController), typeof(BoxCollider2D), typeof(Rigidbody2D))]
+    public sealed class SecondPlayerKinematic : BasePlayerKinematic
     {
-        //--------------------------- Public variables ---------------------------//
-        
-        public SecondPlayerController m_controller;
-        
-        //--------------------------- Methods ---------------------------//
-        
-        // Update is called once per frame
-        private void Update()
+        private void Awake()
         {
-            transform.Translate(m_controller.InputDirection() * (5 * Time.deltaTime));
+            m_controller = GetComponent<SecondPlayerController>();
         }
     }
 }
