@@ -33,7 +33,7 @@ namespace Pong.Ball.Kinematics
         protected virtual void ApplyKinematic()
         {
             //Apply the movement
-            transform.Translate(m_direction * (m_speed * Time.deltaTime));
+            transform.Translate(m_direction * (m_speed * Time.deltaTime), Space.World);
         }
         
         //When the ball touches something, give it the opposite direction
