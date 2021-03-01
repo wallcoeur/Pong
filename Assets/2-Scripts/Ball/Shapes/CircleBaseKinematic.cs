@@ -4,26 +4,20 @@
 |    Date of creation : 28/02/2021                              |
 |---------------------------------------------------------------*/
 
+using Pong.Ball.Kinematics;
 using UnityEngine;
 
-namespace Pong.Ball
+namespace Pong.Ball.Shapes
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(CircleCollider2D))]
-    public class CircleBallMovement : BallMovement
+    public class CircleBaseKinematic : BaseKinematic
     {
-        private void Start()
-        {
-            RandomMovement();
-        }
-
+        //--------------------------- Methods ---------------------------//
+        
+        //Move the object to another random direction
         private void Update()
         {
-            transform.Translate(RandomMovement() * (m_speed * Time.deltaTime));
-        }
-        
-        public override Vector2 RandomMovement()
-        {
-            return m_direction;
+            ApplyKinematic();
         }
     }
 }

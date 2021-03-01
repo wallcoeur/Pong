@@ -4,35 +4,32 @@
 |    Date of creation : 28/02/2021                              |
 |---------------------------------------------------------------*/
 
+using Pong.Ball.Kinematics;
 using UnityEngine;
 
-namespace Pong.Ball
+namespace Pong.Ball.Shapes
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
-    public class SquareBallMovement : BallMovement
+    public class SquareBaseKinematic : BaseKinematic
     {
         //--------------------------- Public variables ---------------------------//
 
         /// <summary> Represent the speed of the rotation for the cube </summary>
         [Tooltip("Represent the speed of the rotation for the cube")] [SerializeField] public float m_rotationSpeed;
-        private void Start()
-        {
-            RandomMovement();
-        }
+        
+        //--------------------------- Methods ---------------------------//
 
         private void Update()
         {
+            ApplyKinematic();
+        }
+
+        protected override void ApplyKinematic()
+        {
+            base.ApplyKinematic();
+            
             //Give a rotation to the square
             transform.Rotate(Vector3.forward * (m_rotationSpeed * Time.deltaTime));
-            
-            //Apply the movement
-            transform.Translate(RandomMovement() * (m_speed * Time.deltaTime), Space.World);
-        }
-        
-        
-        public override Vector2 RandomMovement()
-        {
-            return m_direction;
         }
     }
 }

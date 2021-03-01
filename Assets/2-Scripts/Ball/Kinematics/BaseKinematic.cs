@@ -6,10 +6,10 @@
 
 using UnityEngine;
 
-namespace Pong.Ball
+namespace Pong.Ball.Kinematics
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public abstract class BallMovement : MonoBehaviour
+    public abstract class BaseKinematic : MonoBehaviour
     {
         //--------------------------- Public variables ---------------------------//
         
@@ -23,16 +23,19 @@ namespace Pong.Ball
         
         //--------------------------- Methods ---------------------------//
         
+        //When the script is loaded, we give an initial direction
         public virtual void Awake()
         {
             m_direction = new Vector2(Mathf.Sign(Random.Range(-1, 1)), Mathf.Sign(Random.Range(-1, 1)));
         }
         
-        /// <summary> Give a random movement/rotation to the object </summary>
-        /// <returns> A random movement </returns>
-        public abstract Vector2 RandomMovement();
+        /// <summary> This method apply the movement </summary>
+        protected virtual void ApplyKinematic()
+        {
+            //Apply the movement
+            transform.Translate(m_direction * (m_speed * Time.deltaTime));
+        }
         
-    
         //When the ball touches something, give it the opposite direction
         public virtual void OnCollisionEnter2D()
         {

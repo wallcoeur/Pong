@@ -5,27 +5,24 @@
 |---------------------------------------------------------------*/
 
 using UnityEngine;
+// ReSharper disable All
 
-namespace Pong.Ball
+namespace Pong.Player.InputControllers
 {
-    public class BallSpawner : MonoBehaviour
+    public abstract class BaseController : MonoBehaviour
     {
         //--------------------------- Public variables ---------------------------//
-        
-        /// <summary> The position of the spawn </summary>
-        [Tooltip("The position of the spawn")] [SerializeField]private Transform m_spawnPosition;
-        
-        /// <summary> The object to spawn </summary>
-        [Tooltip("The object to spawn")] [SerializeField]private GameObject m_objectToSpawn;
-        
+
+        [Tooltip("The name of the axis we move on")] [SerializeField] private string m_verticalAxis;
+
         //--------------------------- Hidden variables ---------------------------//
 
         //--------------------------- Methods ---------------------------//
-        
-        //Instantiate the object at the position of the spawner
-        private void Start()
+
+        public virtual Vector2 InputDirection()
         {
-            Instantiate(m_objectToSpawn, m_spawnPosition);
+            Vector2 p_inputs = new Vector2(0, Input.GetAxis(m_verticalAxis));
+            return p_inputs;
         }
     }
 }
