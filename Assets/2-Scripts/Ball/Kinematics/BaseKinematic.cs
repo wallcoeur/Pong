@@ -14,7 +14,7 @@ namespace Pong.Ball.Kinematics
         //--------------------------- Public variables ---------------------------//
         
         ///<summary> Represent the speed </summary>
-        [Tooltip("Represent the speed of the ball")][SerializeField] public int m_speed;
+        [Tooltip("Represent the speed of the ball")][SerializeField] public float m_speed;
         
         //--------------------------- Hidden variables ---------------------------//
         
@@ -37,9 +37,18 @@ namespace Pong.Ball.Kinematics
         }
         
         //When the ball touches something, give it the opposite direction
-        public virtual void OnCollisionEnter2D()
+        public virtual void OnCollisionEnter2D(Collision2D p_other)
         {
-            m_direction *= -1;
+            // Get the contact normal
+            Vector2 p_hit = p_other.contacts[0].normal;
+            
+            // Get the angle of the contact normal we've hit
+            float p_angle = Vector2.Angle(p_hit, Vector2.up);
+            
+            // Check the sides and modify the direction accordingly
+            if (Mathf.Approximately(p_angle, 0)) { m_direction.y *= -1; } // If touches down, we go up
+            if(Mathf.Approximately(p_angle, 180)) { m_direction.y *= -1; } // If touches up, we go down
+            if(Mathf.Approximately(p_angle, 90)) { m_direction.x *= -1; } // If touches a side, we go back in x
         }
     }
 }
