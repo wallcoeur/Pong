@@ -1,4 +1,4 @@
-﻿namespace Pong.Ball.Instancing.Interfaces
+﻿namespace Pong.Instancing.Interfaces
 {
     /// <summary> The interface responsible for spawning something </summary>
     public interface ISpawner

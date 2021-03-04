@@ -5,7 +5,7 @@
 |---------------------------------------------------------------*/
 
 using System;
-using Pong.Ball.Instancing.Interfaces;
+using Pong.Instancing.Interfaces;
 using UnityEngine;
 
 namespace Pong.Instancing

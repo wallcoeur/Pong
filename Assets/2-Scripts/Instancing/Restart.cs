@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Pong
+namespace Pong.Instancing
 {
     public class Restart : MonoBehaviour
     {
