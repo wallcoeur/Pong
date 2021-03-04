@@ -9,17 +9,17 @@ namespace WoolySheep.Player.Kinematics
         
         /// <summary> The controller of this player </summary>
         [HideInInspector][Tooltip("The controller of this player")][SerializeField]
-        public ControllerChecker m_controller;
+        public BaseController m_baseController;
 
         /// <summary> The speed of this player </summary>
         [Tooltip("The speed of this player")] [SerializeField]
         private float m_speed;
         
-
-        // Update is called once per frame
+        
         public virtual void Update()
         {
-            transform.Translate(m_controller.InputDirection() * (m_speed * Time.deltaTime));
+            // Move the player toward the direction of the input
+            transform.Translate(m_baseController.InputDirection() * (m_speed * Time.deltaTime));
         }
     }
 }

@@ -9,12 +9,13 @@ using WoolySheep.Player.InputControllers;
 
 namespace WoolySheep.Player.Kinematics
 {
-    [RequireComponent(typeof(SecondPlayerController), typeof(BoxCollider2D), typeof(Rigidbody2D))]
+    [RequireComponent(typeof(SecondPlayerBaseController), typeof(BoxCollider2D), typeof(Rigidbody2D))]
     public sealed class SecondPlayerKinematic : BasePlayerKinematic
     {
         private void Awake()
         {
-            m_controller = GetComponent<SecondPlayerController>();
+            // Give the correct controller for this kinematic
+            m_baseController = GetComponent<SecondPlayerBaseController>();
         }
     }
 }

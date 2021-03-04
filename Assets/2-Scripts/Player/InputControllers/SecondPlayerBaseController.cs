@@ -10,7 +10,7 @@ using WoolySheep.Player.Kinematics;
 namespace WoolySheep.Player.InputControllers
 {
     [RequireComponent(typeof(SecondPlayerKinematic))]
-    public class SecondPlayerController : ControllerChecker
+    public class SecondPlayerBaseController : BaseController
     {
     }
 }

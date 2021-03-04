@@ -9,7 +9,7 @@ using UnityEngine;
 namespace WoolySheep.Player.InputControllers
 {
     [RequireComponent(typeof(BoxCollider2D), typeof(Rigidbody2D), typeof(ControllerSetter))]
-    public abstract class ControllerChecker : MonoBehaviour
+    public abstract class BaseController : MonoBehaviour
     {
         [Tooltip("This is the setter for the controller")] public ControllerSetter m_setter;
         
@@ -20,6 +20,8 @@ namespace WoolySheep.Player.InputControllers
             InputDirection();
         }
         
+        /// <summary> Give the input direction </summary>
+        /// <returns> a Vector2 direction</returns>
         public Vector2 InputDirection()
         {
             Vector2 p_inputs = new Vector2(0, Input.GetAxis(m_setter.m_verticalAxis));
