@@ -1,2 +1,2 @@
 # Pong
- A little pong clone for myself.
+A little Pong clone
