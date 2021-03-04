@@ -7,7 +7,7 @@
 using System;
 using UnityEngine;
 
-namespace Pong.Player.InputControllers
+namespace WoolySheep.Player.InputControllers
 {
     public class ControllerSetter : MonoBehaviour
     {

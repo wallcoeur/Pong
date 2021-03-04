@@ -5,7 +5,7 @@
 
 using UnityEngine;
 
-namespace Pong.Scores
+namespace WoolySheep.Scores
 {
     [CreateAssetMenu(fileName = "IntVar", menuName = "Pong/Int Variable", order = 0)]
     public class IntVar : ScriptableObject

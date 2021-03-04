@@ -4,10 +4,10 @@
 |    Date of creation : 01/03/2021                              |
 |---------------------------------------------------------------*/
 
-using Pong.Player.InputControllers;
 using UnityEngine;
+using WoolySheep.Player.InputControllers;
 
-namespace Pong.Player.Kinematics
+namespace WoolySheep.Player.Kinematics
 {
     [RequireComponent(typeof(FirstPlayerController), typeof(BoxCollider2D), typeof(Rigidbody2D))]
     public sealed class FirstPlayerKinematic : BasePlayerKinematic

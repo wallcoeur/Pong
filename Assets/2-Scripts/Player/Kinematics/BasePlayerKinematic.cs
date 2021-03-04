@@ -1,7 +1,7 @@
-﻿using Pong.Player.InputControllers;
-using UnityEngine;
+﻿using UnityEngine;
+using WoolySheep.Player.InputControllers;
 
-namespace Pong.Player.Kinematics
+namespace WoolySheep.Player.Kinematics
 {
     public abstract class BasePlayerKinematic : MonoBehaviour
     {

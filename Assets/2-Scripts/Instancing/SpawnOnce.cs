@@ -4,11 +4,10 @@
 |    Date of creation :  28/02/2021                             |
 |---------------------------------------------------------------*/
 
-using System;
-using Pong.Instancing.Interfaces;
 using UnityEngine;
+using WoolySheep.Instancing.Interfaces;
 
-namespace Pong.Instancing
+namespace WoolySheep.Instancing
 {
     public class SpawnOnce : MonoBehaviour, ISpawner
     {

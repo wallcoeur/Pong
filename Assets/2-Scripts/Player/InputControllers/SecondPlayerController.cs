@@ -4,10 +4,10 @@
 |    Date of creation : 01/03/2021                              |
 |---------------------------------------------------------------*/
 
-using Pong.Player.Kinematics;
 using UnityEngine;
+using WoolySheep.Player.Kinematics;
 
-namespace Pong.Player.InputControllers
+namespace WoolySheep.Player.InputControllers
 {
     [RequireComponent(typeof(SecondPlayerKinematic))]
     public class SecondPlayerController : ControllerChecker

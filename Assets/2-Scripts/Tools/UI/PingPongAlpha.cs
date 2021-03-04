@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using TMPro;
+﻿using TMPro;
+using UnityEngine;
 
-namespace Pong.Tools.UI
+namespace WoolySheep.Tools.UI
 {
     public class PingPongAlpha : MonoBehaviour
     {

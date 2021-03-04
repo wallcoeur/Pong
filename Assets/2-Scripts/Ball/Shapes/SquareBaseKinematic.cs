@@ -4,10 +4,10 @@
 |    Date of creation : 28/02/2021                              |
 |---------------------------------------------------------------*/
 
-using Pong.Ball.Kinematics;
 using UnityEngine;
+using WoolySheep.Ball.Kinematics;
 
-namespace Pong.Ball.Shapes
+namespace WoolySheep.Ball.Shapes
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
     public class SquareBaseKinematic : BaseKinematic

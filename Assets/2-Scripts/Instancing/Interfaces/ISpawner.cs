@@ -1,4 +1,4 @@
-﻿namespace Pong.Instancing.Interfaces
+﻿namespace WoolySheep.Instancing.Interfaces
 {
     /// <summary> The interface responsible for spawning something </summary>
     public interface ISpawner

@@ -3,11 +3,10 @@
 |    Date of creation : XX/XX/20XX                              |
 |---------------------------------------------------------------*/
 
-using System;
 using TMPro;
 using UnityEngine;
 
-namespace Pong.Scores
+namespace WoolySheep.Scores
 {
     public class ScoreUpdater : MonoBehaviour
     {

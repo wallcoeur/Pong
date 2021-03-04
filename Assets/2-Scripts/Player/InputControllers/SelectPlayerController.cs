@@ -1,4 +1,4 @@
-﻿namespace Pong.Player.InputControllers
+﻿namespace WoolySheep.Player.InputControllers
 {
     public enum SelectPlayerController
     {

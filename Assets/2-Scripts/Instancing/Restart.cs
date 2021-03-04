@@ -1,8 +1,8 @@
-﻿using Pong.Scores;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using WoolySheep.Scores;
 
-namespace Pong.Instancing
+namespace WoolySheep.Instancing
 {
     public class Restart : MonoBehaviour
     {

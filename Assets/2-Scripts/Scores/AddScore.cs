@@ -1,7 +1,7 @@
-﻿using Pong.Instancing;
-using UnityEngine;
+﻿using UnityEngine;
+using WoolySheep.Instancing;
 
-namespace Pong.Scores
+namespace WoolySheep.Scores
 {
     public class AddScore : MonoBehaviour
     {

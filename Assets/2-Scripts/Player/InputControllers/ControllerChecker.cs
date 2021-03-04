@@ -6,7 +6,7 @@
 
 using UnityEngine;
 
-namespace Pong.Player.InputControllers
+namespace WoolySheep.Player.InputControllers
 {
     [RequireComponent(typeof(BoxCollider2D), typeof(Rigidbody2D), typeof(ControllerSetter))]
     public abstract class ControllerChecker : MonoBehaviour
