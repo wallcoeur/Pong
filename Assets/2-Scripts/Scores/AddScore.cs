@@ -12,11 +12,14 @@ namespace WoolySheep.Scores
         /// <summary> The spawner of the ball </summary>
         [Tooltip("The spawner of the ball")][FormerlySerializedAs("m_respawn")] [SerializeField] private SpawnOnce m_spawner;
         
+        [SerializeField] public ParticleSystem m_deathparticles;
+        
         
         private void OnTriggerEnter2D(Collider2D p_other)
         {
+            m_deathparticles.Play();
+
             // Add the point and respawn the ball
-            
             m_points.m_value += 1;
             m_spawner.Respawn();
         }

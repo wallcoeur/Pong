@@ -49,6 +49,8 @@ namespace WoolySheep.Ball.Kinematics
             if (Mathf.Approximately(p_angle, 0)) { m_direction.y *= -1; } // If touches down, we go up
             if(Mathf.Approximately(p_angle, 180)) { m_direction.y *= -1; } // If touches up, we go down
             if(Mathf.Approximately(p_angle, 90)) { m_direction.x *= -1; } // If touches a side, we go back in x
+    
+            if (p_other.collider.CompareTag("Player")) { GetComponent<SpriteRenderer>().color = Random.ColorHSV(); } //Change color when touching a player
         }
     }
 }

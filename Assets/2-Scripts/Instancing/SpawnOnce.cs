@@ -19,7 +19,7 @@ namespace WoolySheep.Instancing
         [Tooltip("The object to spawn, should be a prefab")] [SerializeField]private GameObject m_objectToSpawn;
 
         [HideInInspector] [SerializeField] public GameObject m_objectSpawned;
-        
+
         //--------------------------- Hidden variables ---------------------------//
 
         //--------------------------- Methods ---------------------------//
@@ -44,7 +44,7 @@ namespace WoolySheep.Instancing
         /// <summary> Destroy the previous object and respawn an object at the position of the spawner </summary>
         public void Respawn()
         {
-            Destroy(m_objectSpawned);
+            Destroy(m_objectSpawned); 
             m_objectSpawned = Instantiate(m_objectToSpawn, transform);
         }
     }
