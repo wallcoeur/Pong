@@ -5,17 +5,17 @@
 |---------------------------------------------------------------*/
 
 using UnityEngine;
-using WoolySheep.Player.InputControllers;
+using WoolySheep.PlayerSystem.InputControllers;
 
-namespace WoolySheep.Player.Kinematics
+namespace WoolySheep.PlayerSystem.Kinematics
 {
-    [RequireComponent(typeof(SecondPlayerBaseController), typeof(BoxCollider2D), typeof(Rigidbody2D))]
-    public sealed class SecondPlayerKinematic : BasePlayerKinematic
+    [RequireComponent( typeof(BoxCollider2D), typeof(Rigidbody2D))]
+    public sealed class FirstPlayerKinematic : BasePlayerKinematic
     {
         private void Awake()
         {
             // Give the correct controller for this kinematic
-            m_baseController = GetComponent<SecondPlayerBaseController>();
+            m_baseController = GetComponent<FirstPlayerBaseController>();
         }
     }
 }

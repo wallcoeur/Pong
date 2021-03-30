@@ -6,7 +6,7 @@
 
 using UnityEngine;
 
-namespace WoolySheep.Ball.Kinematics
+namespace WoolySheep.BallSystem.Kinematics
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public abstract class BaseKinematic : MonoBehaviour

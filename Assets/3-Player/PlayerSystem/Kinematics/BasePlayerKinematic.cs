@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using WoolySheep.Player.InputControllers;
+using WoolySheep.PlayerSystem.InputControllers;
 
-namespace WoolySheep.Player.Kinematics
+namespace WoolySheep.PlayerSystem.Kinematics
 {
     public abstract class BasePlayerKinematic : MonoBehaviour
     {

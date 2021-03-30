@@ -5,12 +5,11 @@
 |---------------------------------------------------------------*/
 
 using UnityEngine;
-using WoolySheep.Player.Kinematics;
+using WoolySheep.PlayerSystem.Kinematics;
 
-namespace WoolySheep.Player.InputControllers
+namespace WoolySheep.PlayerSystem.InputControllers
 {
-    [RequireComponent(typeof(FirstPlayerKinematic))]
-    public class FirstPlayerBaseController : BaseController
+    public class SecondPlayerBaseController : BaseController
     {
     }
 }

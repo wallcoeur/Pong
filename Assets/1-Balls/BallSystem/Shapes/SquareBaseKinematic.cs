@@ -5,9 +5,9 @@
 |---------------------------------------------------------------*/
 
 using UnityEngine;
-using WoolySheep.Ball.Kinematics;
+using WoolySheep.BallSystem.Kinematics;
 
-namespace WoolySheep.Ball.Shapes
+namespace WoolySheep.BallSystem.Shapes
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
     public class SquareBaseKinematic : BaseKinematic

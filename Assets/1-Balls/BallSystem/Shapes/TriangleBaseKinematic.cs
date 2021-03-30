@@ -5,9 +5,9 @@
 |---------------------------------------------------------------*/
 
 using UnityEngine;
-using WoolySheep.Ball.Kinematics;
+using WoolySheep.BallSystem.Kinematics;
 
-namespace WoolySheep.Ball.Shapes
+namespace WoolySheep.BallSystem.Shapes
 {
     [RequireComponent(typeof(Rigidbody2D), typeof(PolygonCollider2D))]
     public class TriangleBaseKinematic : BaseKinematic
