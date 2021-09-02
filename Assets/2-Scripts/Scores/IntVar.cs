@@ -10,6 +10,7 @@ namespace WoolySheep.Scores
     [CreateAssetMenu(fileName = "IntVar", menuName = "Pong/Int Variable", order = 0)]
     public class IntVar : ScriptableObject
     {
-        public int m_value;
+        /// <summary> The actual value of the IntVar </summary>
+        [Tooltip("The actual value of the IntVar")]public int m_value;
     }
 }

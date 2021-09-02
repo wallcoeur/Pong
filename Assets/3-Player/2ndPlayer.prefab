@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7932520195868111001}
   - component: {fileID: 7932520195868111078}
   - component: {fileID: 7932520195868111079}
-  - component: {fileID: 7932520195868111076}
   - component: {fileID: 7932520195868111077}
   m_Layer: 0
   m_Name: 2ndPlayer
@@ -51,6 +50,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -145,22 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882c9d7f86cb4c72b9a5e083fd335a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_controller: {fileID: 0}
+  m_baseController: {fileID: 0}
   m_speed: 10
---- !u!114 &7932520195868111076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7932520195868111072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52b949bf499047fcad8b1a14c1daf1ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_verticalAxis: 
-  m_playerController: 1
 --- !u!114 &7932520195868111077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,4 +159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054ce86173b848a7a0ba153b5e76fb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_setter: {fileID: 7932520195868111076}
+  m_setPlayerController:
+    m_verticalAxis: 
+    m_controller: 1
